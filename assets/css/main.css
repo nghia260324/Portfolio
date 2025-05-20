@@ -1638,3 +1638,9 @@ section,
   width: auto;
 }
 
+.skills-content li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 6px;
+}
