@@ -115,40 +115,10 @@
           <div class="swiper-pagination"></div>
         </div>
 
-        <div class="row justify-content-between gy-4 mt-4">
+        <div id="game-wrap" class="row justify-content-between gy-4 mt-4">
 
-          <div class="col-lg-9" data-aos="fade-up">
+          <div id="game-main" class="col-lg-9" data-aos="fade-up">
 
-            <style>
-              #game {
-                width: 80vw;
-                max-width: 960px;
-                aspect-ratio: 16 / 9;
-                margin: 0 auto;
-                background: #111;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding-top: 0;
-                margin-bottom: 24px;
-              }
-
-              #unity-canvas {
-                background: #231F20;
-                display: block;
-                user-select: none;
-              }
-
-              #unity-canvas.landscape {
-                width: 100%;
-                height: 100%;
-              }
-
-              #unity-canvas.portrait {
-                height: 100%;
-                width: auto;
-              }
-            </style>
             <section id="game" class="portfolio-details section">
               <canvas id="unity-canvas" width="640" height="360" class="landscape"></canvas>
             </section>
@@ -215,54 +185,8 @@
                 });
               })();
             </script>
-            <h2>Công nghệ sử dụng trong dự án</h2>
-            <ul>
-              <li><strong>Unity</strong> – Công cụ chính để phát triển game đa nền tảng.</li>
-              <li><strong>C#</strong> – Ngôn ngữ lập trình chính cho gameplay và logic.</li>
-              <li><strong>PlayerPrefab</strong> – Sử dụng để tạo và quản lý đối tượng kim cương và các thành phần
-                gameplay.</li>
-              <li><strong>Animation</strong> – Tạo hiệu ứng chuyển động mượt mà khi kéo, va chạm, và hoàn thành màn
-                chơi.</li>
-              <li><strong>Effect</strong> – Áp dụng hiệu ứng hình ảnh khi kim cương biến mất hoặc đạt được 3 sao.</li>
-              <li><strong>UI System</strong> – Thiết kế giao diện người dùng như nút điều khiển, số lượt còn lại, kết
-                quả, v.v.</li>
-              <li><strong>Tilemap</strong> – Sử dụng để xây dựng bố cục màn chơi theo dạng lưới, dễ dàng quản lý và
-                thiết kế level.</li>
-              <li><strong>DoTween</strong> – Dùng để tạo các hiệu ứng chuyển động mượt mà, tối ưu và dễ quản lý cho UI
-                và gameplay.</li>
-            </ul>
-
-            <div class="portfolio-description">
-              <h2>Hedgehog Go Home – Giúp chú nhím trở về tổ an toàn</h2>
-
-              <p>
-                <strong>Hedgehog Go Home</strong> là một trò chơi giải đố vật lý, nơi bạn vào vai một chú nhím nhỏ đang
-                tìm đường
-                về tổ.
-              </p>
-
-              <p>
-                Trên mỗi màn chơi, chú nhím sẽ đứng trên các cấu trúc gồm <strong>thùng gỗ, thanh gỗ và nhiều vật cản
-                  khác</strong>.
-                Nhiệm vụ của bạn là <strong>phá huỷ vật cản đúng thời điểm</strong> để nhím có thể rơi hoặc lăn về tổ
-                một cách an toàn.
-              </p>
-
-              <p>
-                Tuy nhiên, hãy cẩn thận! Nếu nhím rơi xuống đất hoặc lệch khỏi tổ, bạn sẽ <strong>thất bại</strong>.
-                Mỗi hành động đều cần được tính toán kỹ lưỡng, vì một quyết định sai có thể khiến chú nhím rơi vào nguy
-                hiểm.
-              </p>
-
-              <p>
-                Với gameplay đơn giản nhưng đầy thử thách, <strong>Hedgehog Go Home</strong> sẽ kiểm tra khả năng quan
-                sát và tư duy logic của bạn qua từng màn chơi.
-              </p>
-            </div>
-
           </div>
-
-          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <div id="game-sidebar" class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
             <div class="portfolio-info">
               <h3>Thông tin dự án</h3>
               <ul>
@@ -277,7 +201,52 @@
           </div>
 
         </div>
+        <section id="game-info" class="section">
+          <h2>Công nghệ sử dụng trong dự án</h2>
+          <ul>
+            <li><strong>Unity</strong> – Công cụ chính để phát triển game đa nền tảng.</li>
+            <li><strong>C#</strong> – Ngôn ngữ lập trình chính cho gameplay và logic.</li>
+            <li><strong>PlayerPrefab</strong> – Sử dụng để tạo và quản lý đối tượng kim cương và các thành phần
+              gameplay.</li>
+            <li><strong>Animation</strong> – Tạo hiệu ứng chuyển động mượt mà khi kéo, va chạm, và hoàn thành màn
+              chơi.</li>
+            <li><strong>Effect</strong> – Áp dụng hiệu ứng hình ảnh khi kim cương biến mất hoặc đạt được 3 sao.</li>
+            <li><strong>UI System</strong> – Thiết kế giao diện người dùng như nút điều khiển, số lượt còn lại, kết
+              quả, v.v.</li>
+            <li><strong>Tilemap</strong> – Sử dụng để xây dựng bố cục màn chơi theo dạng lưới, dễ dàng quản lý và
+              thiết kế level.</li>
+            <li><strong>DoTween</strong> – Dùng để tạo các hiệu ứng chuyển động mượt mà, tối ưu và dễ quản lý cho UI
+              và gameplay.</li>
+          </ul>
 
+          <div class="portfolio-description">
+            <h2>Hedgehog Go Home – Giúp chú nhím trở về tổ an toàn</h2>
+
+            <p>
+              <strong>Hedgehog Go Home</strong> là một trò chơi giải đố vật lý, nơi bạn vào vai một chú nhím nhỏ đang
+              tìm đường
+              về tổ.
+            </p>
+
+            <p>
+              Trên mỗi màn chơi, chú nhím sẽ đứng trên các cấu trúc gồm <strong>thùng gỗ, thanh gỗ và nhiều vật cản
+                khác</strong>.
+              Nhiệm vụ của bạn là <strong>phá huỷ vật cản đúng thời điểm</strong> để nhím có thể rơi hoặc lăn về tổ
+              một cách an toàn.
+            </p>
+
+            <p>
+              Tuy nhiên, hãy cẩn thận! Nếu nhím rơi xuống đất hoặc lệch khỏi tổ, bạn sẽ <strong>thất bại</strong>.
+              Mỗi hành động đều cần được tính toán kỹ lưỡng, vì một quyết định sai có thể khiến chú nhím rơi vào nguy
+              hiểm.
+            </p>
+
+            <p>
+              Với gameplay đơn giản nhưng đầy thử thách, <strong>Hedgehog Go Home</strong> sẽ kiểm tra khả năng quan
+              sát và tư duy logic của bạn qua từng màn chơi.
+            </p>
+          </div>
+        </section>
       </div>
 
     </section><!-- /Portfolio Details Section -->

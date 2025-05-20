@@ -115,40 +115,10 @@
           <div class="swiper-pagination"></div>
         </div>
 
-        <div class="row justify-content-between gy-4 mt-4">
+        <div id="game-wrap" class="row justify-content-between gy-4 mt-4">
 
-          <div class="col-lg-9" data-aos="fade-up">
+          <div id="game-main" class="col-lg-9" data-aos="fade-up">
 
-            <style>
-              #game {
-                width: 80vw;
-                max-width: 960px;
-                aspect-ratio: 16 / 9;
-                margin: 0 auto;
-                background: #111;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding-top: 0;
-                margin-bottom: 24px;
-              }
-
-              #unity-canvas {
-                background: #231F20;
-                display: block;
-                user-select: none;
-              }
-
-              #unity-canvas.landscape {
-                width: 100%;
-                height: 100%;
-              }
-
-              #unity-canvas.portrait {
-                height: 100%;
-                width: auto;
-              }
-            </style>
             <section id="game" class="portfolio-details section">
               <canvas id="unity-canvas" width="640" height="360" class="landscape"></canvas>
             </section>
@@ -215,56 +185,9 @@
                 });
               })();
             </script>
-            <h2>Công nghệ sử dụng trong dự án</h2>
-            <ul>
-              <li><strong>Unity</strong> – Công cụ chính để phát triển game đa nền tảng.</li>
-              <li><strong>C#</strong> – Ngôn ngữ lập trình chính cho gameplay và logic.</li>
-              <li><strong>PlayerPrefab</strong> – Sử dụng để tạo và quản lý đối tượng kim cương và các thành phần
-                gameplay.</li>
-              <li><strong>Animation</strong> – Tạo hiệu ứng chuyển động mượt mà khi kéo, va chạm, và hoàn thành màn
-                chơi.</li>
-              <li><strong>Effect</strong> – Áp dụng hiệu ứng hình ảnh khi kim cương biến mất hoặc đạt được 3 sao.</li>
-              <li><strong>UI System</strong> – Thiết kế giao diện người dùng như nút điều khiển, số lượt còn lại, kết
-                quả, v.v.</li>
-              <li><strong>Tilemap</strong> – Sử dụng để xây dựng bố cục màn chơi theo dạng lưới, dễ dàng quản lý và
-                thiết kế level.</li>
-              <li><strong>DoTween</strong> – Dùng để tạo các hiệu ứng chuyển động mượt mà, tối ưu và dễ quản lý cho UI
-                và gameplay.</li>
-            </ul>
-
-            <div class="portfolio-description">
-              <h2>Hunger Trails – Đường đi sinh tồn</h2>
-
-              <p>
-                <strong>Hunger Trails</strong> là một trò chơi giải đố với lối chơi đơn giản nhưng đầy thử thách, nơi
-                bạn phải
-                <strong>ăn hết toàn bộ quả trong màn chơi</strong> bằng cách di chuyển thông minh trên bản đồ.
-              </p>
-
-              <p>
-                Nhân vật của bạn chỉ có thể <strong>di chuyển theo 4 hướng: lên, xuống, trái, phải</strong> và sẽ tiếp
-                tục đi thẳng
-                cho đến khi gặp vật cản. Mỗi bước đi cần được <strong>tính toán cẩn thận</strong>, vì nếu bạn tự dồn
-                mình vào góc
-                chết hoặc không còn đường đi hợp lý, bạn sẽ bị <strong>mắc kẹt và phải chơi lại</strong>.
-              </p>
-
-              <p>
-                Mỗi màn chơi là một mê cung khác nhau, yêu cầu người chơi phải quan sát kỹ, lên kế hoạch và ra quyết
-                định thật chính xác.
-                Càng về sau, độ khó càng tăng và đòi hỏi bạn phải tư duy chiến lược để không bỏ sót bất kỳ quả nào.
-              </p>
-
-              <p>
-                Liệu bạn có thể vượt qua mọi mê cung và ăn sạch tất cả? <strong>Hãy thử thách bộ não của bạn với Hunger
-                  Trails!</strong>
-              </p>
-            </div>
-
-
           </div>
 
-          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <div id="game-sidebar" class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
             <div class="portfolio-info">
               <h3>Thông tin dự án</h3>
               <ul>
@@ -277,9 +200,54 @@
               </ul>
             </div>
           </div>
-
         </div>
+        <section id="game-info" class="section">
+          <h2>Công nghệ sử dụng trong dự án</h2>
+          <ul>
+            <li><strong>Unity</strong> – Công cụ chính để phát triển game đa nền tảng.</li>
+            <li><strong>C#</strong> – Ngôn ngữ lập trình chính cho gameplay và logic.</li>
+            <li><strong>PlayerPrefab</strong> – Sử dụng để tạo và quản lý đối tượng kim cương và các thành phần
+              gameplay.</li>
+            <li><strong>Animation</strong> – Tạo hiệu ứng chuyển động mượt mà khi kéo, va chạm, và hoàn thành màn
+              chơi.</li>
+            <li><strong>Effect</strong> – Áp dụng hiệu ứng hình ảnh khi kim cương biến mất hoặc đạt được 3 sao.</li>
+            <li><strong>UI System</strong> – Thiết kế giao diện người dùng như nút điều khiển, số lượt còn lại, kết
+              quả, v.v.</li>
+            <li><strong>Tilemap</strong> – Sử dụng để xây dựng bố cục màn chơi theo dạng lưới, dễ dàng quản lý và
+              thiết kế level.</li>
+            <li><strong>DoTween</strong> – Dùng để tạo các hiệu ứng chuyển động mượt mà, tối ưu và dễ quản lý cho UI
+              và gameplay.</li>
+          </ul>
 
+          <div class="portfolio-description">
+            <h2>Hunger Trails – Đường đi sinh tồn</h2>
+
+            <p>
+              <strong>Hunger Trails</strong> là một trò chơi giải đố với lối chơi đơn giản nhưng đầy thử thách, nơi
+              bạn phải
+              <strong>ăn hết toàn bộ quả trong màn chơi</strong> bằng cách di chuyển thông minh trên bản đồ.
+            </p>
+
+            <p>
+              Nhân vật của bạn chỉ có thể <strong>di chuyển theo 4 hướng: lên, xuống, trái, phải</strong> và sẽ tiếp
+              tục đi thẳng
+              cho đến khi gặp vật cản. Mỗi bước đi cần được <strong>tính toán cẩn thận</strong>, vì nếu bạn tự dồn
+              mình vào góc
+              chết hoặc không còn đường đi hợp lý, bạn sẽ bị <strong>mắc kẹt và phải chơi lại</strong>.
+            </p>
+
+            <p>
+              Mỗi màn chơi là một mê cung khác nhau, yêu cầu người chơi phải quan sát kỹ, lên kế hoạch và ra quyết
+              định thật chính xác.
+              Càng về sau, độ khó càng tăng và đòi hỏi bạn phải tư duy chiến lược để không bỏ sót bất kỳ quả nào.
+            </p>
+
+            <p>
+              Liệu bạn có thể vượt qua mọi mê cung và ăn sạch tất cả? <strong>Hãy thử thách bộ não của bạn với Hunger
+                Trails!</strong>
+            </p>
+          </div>
+        </section>
       </div>
 
     </section><!-- /Portfolio Details Section -->

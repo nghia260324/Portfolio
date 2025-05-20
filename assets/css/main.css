@@ -169,6 +169,8 @@ h6 {
 
 @media (max-width: 1199px) {
   .header {
+    top: 0;
+    bottom: 0;
     background-color: var(--background-color);
     border-right: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
     width: 300px;
@@ -178,12 +180,59 @@ h6 {
 
 @media (min-width: 1200px) and (max-width: 1600px) {
   .header~main {
-    margin-left: 200px;
+    /* margin-left: 200px; */
   }
 
   .header~main .hero {
-    margin-left: -160px;
+    /* margin-left: -160px; */
     width: 100vw;
+  }
+}
+
+@media (max-width: 1420px) {
+  #game-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #game-main,
+  #game-sidebar {
+    width: 100%;
+    max-width: 960px;
+    /* width: 100%; */
+  }
+
+  #game-info {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+  }
+
+  #game-info>* {
+    width: 100%;
+    /* chiếm 80% chiều rộng viewport */
+    max-width: 960px;
+    /* không vượt quá 960px */
+    justify-self: center;
+    /* căn giữa item trong grid */
+    box-sizing: border-box;
+    /* tránh padding + border làm rộng quá */
+  }
+
+
+  #game-sidebar ul {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+}
+
+@media (max-width: 767px) {
+  #game-sidebar ul {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1085,9 +1134,11 @@ section,
 .contact .info-item+.info-item {
   margin-top: 40px;
 }
+
 #contact-main {
   padding-bottom: 120px;
 }
+
 .contact .info-item i {
   color: var(--accent-color);
   background: color-mix(in srgb, var(--accent-color), transparent 92%);
@@ -1167,9 +1218,11 @@ section,
 .portfolio-details {
   padding: 24px 60px 0px;
 }
+
 .portfolio-details-slider {
   height: calc(100vh - 128px);
 }
+
 .portfolio-details .portfolio-details-slider img {
   width: 100%;
 }
@@ -1476,4 +1529,34 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+
+#game {
+  width: 100%;
+  max-width: 960px;
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0;
+  margin-bottom: 24px;
+}
+
+#unity-canvas {
+  background: #231F20;
+  display: block;
+  user-select: none;
+}
+
+#unity-canvas.landscape {
+  width: 100%;
+  height: 100%;
+}
+
+#unity-canvas.portrait {
+  height: 100%;
+  width: auto;
 }

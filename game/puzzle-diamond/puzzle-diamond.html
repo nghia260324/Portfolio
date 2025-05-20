@@ -115,40 +115,9 @@
           <div class="swiper-pagination"></div>
         </div>
 
-        <div class="row justify-content-between gy-4 mt-4">
+        <div id="game-wrap" class="row justify-content-between gy-4 mt-4">
 
-          <div class="col-lg-9" data-aos="fade-up">
-
-            <style>
-              #game {
-                width: 80vw;
-                max-width: 960px;
-                aspect-ratio: 16 / 9;
-                margin: 0 auto;
-                background: #111;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding-top: 0;
-                margin-bottom: 24px;
-              }
-
-              #unity-canvas {
-                background: #231F20;
-                display: block;
-                user-select: none;
-              }
-
-              #unity-canvas.landscape {
-                width: 100%;
-                height: 100%;
-              }
-
-              #unity-canvas.portrait {
-                height: 100%;
-                width: auto;
-              }
-            </style>
+          <div id="game-main" class="col-lg-9" data-aos="fade-up">
             <section id="game" class="portfolio-details section">
               <canvas id="unity-canvas" width="640" height="360" class="landscape"></canvas>
             </section>
@@ -215,49 +184,9 @@
                 });
               })();
             </script>
-            <h2>Công nghệ sử dụng trong dự án</h2>
-            <ul>
-              <li><strong>Unity</strong> – Công cụ chính để phát triển game đa nền tảng.</li>
-              <li><strong>C#</strong> – Ngôn ngữ lập trình chính cho gameplay và logic.</li>
-              <li><strong>PlayerPrefab</strong> – Sử dụng để tạo và quản lý đối tượng kim cương và các thành phần
-                gameplay.</li>
-              <li><strong>Animation</strong> – Tạo hiệu ứng chuyển động mượt mà khi kéo, va chạm, và hoàn thành màn
-                chơi.</li>
-              <li><strong>Effect</strong> – Áp dụng hiệu ứng hình ảnh khi kim cương biến mất hoặc đạt được 3 sao.</li>
-              <li><strong>UI System</strong> – Thiết kế giao diện người dùng như nút điều khiển, số lượt còn lại, kết
-                quả, v.v.</li>
-              <li><strong>Tilemap</strong> – Sử dụng để xây dựng bố cục màn chơi theo dạng lưới, dễ dàng quản lý và
-                thiết kế level.</li>
-              <li><strong>DoTween</strong> – Dùng để tạo các hiệu ứng chuyển động mượt mà, tối ưu và dễ quản lý cho UI
-                và gameplay.</li>
-            </ul>
-
-            <div class="portfolio-description">
-              <h2>Puzzle Diamond – Ghép kim cương giành chiến thắng</h2>
-
-              <p>
-                Puzzle Diamond là trò chơi giải đố nơi bạn phải <strong>kéo và di chuyển các viên kim cương sao cho 2
-                  viên cùng màu chạm nhau để biến mất</strong>.
-                Mỗi màn chơi đều có <strong>số lượt di chuyển giới hạn</strong>, vì vậy bạn cần phải suy nghĩ kỹ càng
-                trước mỗi bước đi.
-              </p>
-
-              <p>
-                Mục tiêu của bạn là <strong>xoá sạch tất cả kim cương trên màn hình trước khi hết lượt</strong>.
-                Nếu bạn hoàn thành màn chơi với <strong>chính xác 3 lượt di chuyển còn lại</strong>, bạn sẽ đạt được
-                <strong>3 sao tối đa</strong> – phần thưởng cao nhất của mỗi level.
-              </p>
-
-              <p>
-                Hãy thử sức và xem bạn có thể vượt qua bao nhiêu màn chơi! <strong>Chia sẻ kết quả với bạn bè</strong>
-                và <strong>thách thức họ phá kỷ lục của bạn</strong>.
-              </p>
-            </div>
-
-
           </div>
 
-          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <div id="game-sidebar" class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
             <div class="portfolio-info">
               <h3>Thông tin dự án</h3>
               <ul>
@@ -270,9 +199,47 @@
               </ul>
             </div>
           </div>
-
         </div>
+        <section id="game-info" class="section">
+          <h2>Công nghệ sử dụng trong dự án</h2>
+          <ul>
+            <li><strong>Unity</strong> – Công cụ chính để phát triển game đa nền tảng.</li>
+            <li><strong>C#</strong> – Ngôn ngữ lập trình chính cho gameplay và logic.</li>
+            <li><strong>PlayerPrefab</strong> – Sử dụng để tạo và quản lý đối tượng kim cương và các thành phần
+              gameplay.</li>
+            <li><strong>Animation</strong> – Tạo hiệu ứng chuyển động mượt mà khi kéo, va chạm, và hoàn thành màn
+              chơi.</li>
+            <li><strong>Effect</strong> – Áp dụng hiệu ứng hình ảnh khi kim cương biến mất hoặc đạt được 3 sao.</li>
+            <li><strong>UI System</strong> – Thiết kế giao diện người dùng như nút điều khiển, số lượt còn lại, kết
+              quả, v.v.</li>
+            <li><strong>Tilemap</strong> – Sử dụng để xây dựng bố cục màn chơi theo dạng lưới, dễ dàng quản lý và
+              thiết kế level.</li>
+            <li><strong>DoTween</strong> – Dùng để tạo các hiệu ứng chuyển động mượt mà, tối ưu và dễ quản lý cho UI
+              và gameplay.</li>
+          </ul>
 
+          <div class="portfolio-description">
+            <h2>Puzzle Diamond – Ghép kim cương giành chiến thắng</h2>
+
+            <p>
+              Puzzle Diamond là trò chơi giải đố nơi bạn phải <strong>kéo và di chuyển các viên kim cương sao cho 2
+                viên cùng màu chạm nhau để biến mất</strong>.
+              Mỗi màn chơi đều có <strong>số lượt di chuyển giới hạn</strong>, vì vậy bạn cần phải suy nghĩ kỹ càng
+              trước mỗi bước đi.
+            </p>
+
+            <p>
+              Mục tiêu của bạn là <strong>xoá sạch tất cả kim cương trên màn hình trước khi hết lượt</strong>.
+              Nếu bạn hoàn thành màn chơi với <strong>chính xác 3 lượt di chuyển còn lại</strong>, bạn sẽ đạt được
+              <strong>3 sao tối đa</strong> – phần thưởng cao nhất của mỗi level.
+            </p>
+
+            <p>
+              Hãy thử sức và xem bạn có thể vượt qua bao nhiêu màn chơi! <strong>Chia sẻ kết quả với bạn bè</strong>
+              và <strong>thách thức họ phá kỷ lục của bạn</strong>.
+            </p>
+          </div>
+        </section>
       </div>
 
     </section><!-- /Portfolio Details Section -->

@@ -115,40 +115,9 @@
           <div class="swiper-pagination"></div>
         </div>
 
-        <div class="row justify-content-between gy-4 mt-4">
+        <div id="game-wrap" class="row justify-content-between gy-4 mt-4">
 
-          <div class="col-lg-9" data-aos="fade-up">
-
-            <style>
-              #game {
-                width: 80vw;
-                max-width: 960px;
-                aspect-ratio: 16 / 9;
-                margin: 0 auto;
-                background: #111;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding-top: 0;
-                margin-bottom: 24px;
-              }
-
-              #unity-canvas {
-                background: #231F20;
-                display: block;
-                user-select: none;
-              }
-
-              #unity-canvas.landscape {
-                width: 100%;
-                height: 100%;
-              }
-
-              #unity-canvas.portrait {
-                height: 100%;
-                width: auto;
-              }
-            </style>
+          <div id="game-main" class="col-lg-9" data-aos="fade-up">
             <section id="game" class="portfolio-details section">
               <canvas id="unity-canvas" width="640" height="360" class="landscape"></canvas>
             </section>
@@ -215,52 +184,11 @@
                 });
               })();
             </script>
-            <h2>Công nghệ sử dụng trong dự án</h2>
-            <ul>
-              <li><strong>Unity</strong> – Công cụ chính để phát triển game đa nền tảng.</li>
-              <li><strong>C#</strong> – Ngôn ngữ lập trình chính cho gameplay và logic.</li>
-              <li><strong>PlayerPrefab</strong> – Sử dụng để tạo và quản lý đối tượng kim cương và các thành phần
-                gameplay.</li>
-              <li><strong>Animation</strong> – Tạo hiệu ứng chuyển động mượt mà khi kéo, va chạm, và hoàn thành màn
-                chơi.</li>
-              <li><strong>Effect</strong> – Áp dụng hiệu ứng hình ảnh khi kim cương biến mất hoặc đạt được 3 sao.</li>
-              <li><strong>UI System</strong> – Thiết kế giao diện người dùng như nút điều khiển, số lượt còn lại, kết
-                quả, v.v.</li>
-              <li><strong>Tilemap</strong> – Sử dụng để xây dựng bố cục màn chơi theo dạng lưới, dễ dàng quản lý và
-                thiết kế level.</li>
-              <li><strong>DoTween</strong> – Dùng để tạo các hiệu ứng chuyển động mượt mà, tối ưu và dễ quản lý cho UI
-                và gameplay.</li>
-            </ul>
 
-            <div class="portfolio-description">
-              <h2>Throw Bomb – Ném bom trúng tâm để vượt qua thử thách</h2>
-
-              <p>
-                <strong>Throw Bomb</strong> là một trò chơi thử thách kỹ năng ngắm và căn lực, nơi bạn phải ném bom
-                trúng mục tiêu để vượt qua từng màn chơi.
-              </p>
-
-              <p>
-                Mỗi màn sẽ có một <strong>tâm mục tiêu di chuyển</strong> — bạn cần căn góc và lực thật chuẩn để quả bom
-                rơi đúng vào trung tâm. Bom không rơi thẳng mà theo <strong>quỹ đạo cong</strong>, đòi hỏi bạn phải tính
-                toán kỹ trước khi ném.
-              </p>
-
-              <p>
-                Bạn chỉ có một số lượng bom giới hạn trong mỗi màn. Để chiến thắng, bạn phải <strong>ném trúng đủ số lần
-                  yêu cầu</strong>. Càng lên level cao, <strong>tốc độ và quỹ đạo di chuyển của mục tiêu sẽ càng khó
-                  đoán</strong>, khiến việc căn chỉnh trở nên khó khăn hơn nhiều.
-              </p>
-
-              <p>
-                <strong>Throw Bomb</strong> kết hợp giữa kỹ năng phản xạ, cảm giác vật lý và khả năng phán đoán. Liệu
-                bạn có thể trở thành tay ném bom chính xác nhất?
-              </p>
-            </div>
 
           </div>
 
-          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <div id="game-sidebar" class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
             <div class="portfolio-info">
               <h3>Thông tin dự án</h3>
               <ul>
@@ -275,7 +203,50 @@
           </div>
 
         </div>
+        <section id="game-info" class="section">
+          <h2>Công nghệ sử dụng trong dự án</h2>
+          <ul>
+            <li><strong>Unity</strong> – Công cụ chính để phát triển game đa nền tảng.</li>
+            <li><strong>C#</strong> – Ngôn ngữ lập trình chính cho gameplay và logic.</li>
+            <li><strong>PlayerPrefab</strong> – Sử dụng để tạo và quản lý đối tượng kim cương và các thành phần
+              gameplay.</li>
+            <li><strong>Animation</strong> – Tạo hiệu ứng chuyển động mượt mà khi kéo, va chạm, và hoàn thành màn
+              chơi.</li>
+            <li><strong>Effect</strong> – Áp dụng hiệu ứng hình ảnh khi kim cương biến mất hoặc đạt được 3 sao.</li>
+            <li><strong>UI System</strong> – Thiết kế giao diện người dùng như nút điều khiển, số lượt còn lại, kết
+              quả, v.v.</li>
+            <li><strong>Tilemap</strong> – Sử dụng để xây dựng bố cục màn chơi theo dạng lưới, dễ dàng quản lý và
+              thiết kế level.</li>
+            <li><strong>DoTween</strong> – Dùng để tạo các hiệu ứng chuyển động mượt mà, tối ưu và dễ quản lý cho UI
+              và gameplay.</li>
+          </ul>
 
+          <div class="portfolio-description">
+            <h2>Throw Bomb – Ném bom trúng tâm để vượt qua thử thách</h2>
+
+            <p>
+              <strong>Throw Bomb</strong> là một trò chơi thử thách kỹ năng ngắm và căn lực, nơi bạn phải ném bom
+              trúng mục tiêu để vượt qua từng màn chơi.
+            </p>
+
+            <p>
+              Mỗi màn sẽ có một <strong>tâm mục tiêu di chuyển</strong> — bạn cần căn góc và lực thật chuẩn để quả bom
+              rơi đúng vào trung tâm. Bom không rơi thẳng mà theo <strong>quỹ đạo cong</strong>, đòi hỏi bạn phải tính
+              toán kỹ trước khi ném.
+            </p>
+
+            <p>
+              Bạn chỉ có một số lượng bom giới hạn trong mỗi màn. Để chiến thắng, bạn phải <strong>ném trúng đủ số lần
+                yêu cầu</strong>. Càng lên level cao, <strong>tốc độ và quỹ đạo di chuyển của mục tiêu sẽ càng khó
+                đoán</strong>, khiến việc căn chỉnh trở nên khó khăn hơn nhiều.
+            </p>
+
+            <p>
+              <strong>Throw Bomb</strong> kết hợp giữa kỹ năng phản xạ, cảm giác vật lý và khả năng phán đoán. Liệu
+              bạn có thể trở thành tay ném bom chính xác nhất?
+            </p>
+          </div>
+        </section>
       </div>
 
     </section><!-- /Portfolio Details Section -->

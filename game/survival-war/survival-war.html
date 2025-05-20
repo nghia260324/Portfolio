@@ -115,40 +115,10 @@
           <div class="swiper-pagination"></div>
         </div>
 
-        <div class="row justify-content-between gy-4 mt-4">
+        <div id="game-wrap" class="row justify-content-between gy-4 mt-4">
 
-          <div class="col-lg-9" data-aos="fade-up">
+          <div id="game-main" class="col-lg-9" data-aos="fade-up">
 
-            <style>
-              #game {
-                width: 80vw;
-                max-width: 960px;
-                aspect-ratio: 16 / 9;
-                margin: 0 auto;
-                background: #111;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding-top: 0;
-                margin-bottom: 24px;
-              }
-
-              #unity-canvas {
-                background: #231F20;
-                display: block;
-                user-select: none;
-              }
-
-              #unity-canvas.landscape {
-                width: 100%;
-                height: 100%;
-              }
-
-              #unity-canvas.portrait {
-                height: 100%;
-                width: auto;
-              }
-            </style>
             <section id="game" class="portfolio-details section">
               <canvas id="unity-canvas" width="640" height="360" class="landscape"></canvas>
             </section>
@@ -215,58 +185,12 @@
                 });
               })();
             </script>
-            <h2>Công nghệ sử dụng trong dự án</h2>
-            <ul>
-              <li><strong>Unity</strong> – Công cụ chính để phát triển game đa nền tảng.</li>
-              <li><strong>C#</strong> – Ngôn ngữ lập trình chính cho gameplay và logic.</li>
-              <li><strong>PlayerPrefab</strong> – Sử dụng để tạo và quản lý đối tượng kim cương và các thành phần
-                gameplay.</li>
-              <li><strong>Animation</strong> – Tạo hiệu ứng chuyển động mượt mà khi kéo, va chạm, và hoàn thành màn
-                chơi.</li>
-              <li><strong>Effect</strong> – Áp dụng hiệu ứng hình ảnh khi kim cương biến mất hoặc đạt được 3 sao.</li>
-              <li><strong>UI System</strong> – Thiết kế giao diện người dùng như nút điều khiển, số lượt còn lại, kết
-                quả, v.v.</li>
-              <li><strong>Tilemap</strong> – Sử dụng để xây dựng bố cục màn chơi theo dạng lưới, dễ dàng quản lý và
-                thiết kế level.</li>
-              <li><strong>DoTween</strong> – Dùng để tạo các hiệu ứng chuyển động mượt mà, tối ưu và dễ quản lý cho UI
-                và gameplay.</li>
-            </ul>
 
-            <div class="portfolio-description">
-              <h2>Survival War – Khai thác, mở rộng và sinh tồn</h2>
-
-              <p>
-                <strong>Survival War</strong> là một trò chơi 2D top-down kết hợp giữa sinh tồn, khai thác tài nguyên và
-                chiến đấu.
-              </p>
-
-              <p>
-                Người chơi bắt đầu trên một ô đất nhỏ với lượng <strong>tiền và tài nguyên giới hạn</strong>. Để mở rộng
-                đất, bạn cần sử dụng tiền kiếm được từ việc <strong>thu hoạch gỗ, đá, vàng và kim cương</strong>.
-              </p>
-
-              <p>
-                Việc thu hoạch đòi hỏi <strong>nâng cấp công cụ</strong> (từ gỗ đến kim cương) để tăng tốc độ khai thác.
-                Mỗi hành động tiêu tốn <strong>thể lực</strong>, có thể hồi bằng cách <strong>ăn táo</strong> hoặc
-                <strong>đứng yên nghỉ ngơi</strong>.
-              </p>
-
-              <p>
-                Khi bạn mở rộng bản đồ đến một mức độ nhất định, <strong>quái slime sẽ xuất hiện</strong>. Từ đó, yếu tố
-                sinh tồn trở nên khốc liệt hơn – nếu bạn chết, <strong>mọi tài nguyên sẽ mất hết</strong>, chỉ giữ lại
-                công cụ đã chế tạo.
-              </p>
-
-              <p>
-                <strong>Survival War</strong> mang đến trải nghiệm kết hợp giữa quản lý tài nguyên, xây dựng và sinh tồn
-                đầy hấp dẫn cho người chơi yêu thích thử thách.
-              </p>
-            </div>
 
 
           </div>
 
-          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <div id="game-sidebar" class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
             <div class="portfolio-info">
               <h3>Thông tin dự án</h3>
               <ul>
@@ -281,7 +205,55 @@
           </div>
 
         </div>
+        <section id="game-info" class="section">
+          <h2>Công nghệ sử dụng trong dự án</h2>
+          <ul>
+            <li><strong>Unity</strong> – Công cụ chính để phát triển game đa nền tảng.</li>
+            <li><strong>C#</strong> – Ngôn ngữ lập trình chính cho gameplay và logic.</li>
+            <li><strong>PlayerPrefab</strong> – Sử dụng để tạo và quản lý đối tượng kim cương và các thành phần
+              gameplay.</li>
+            <li><strong>Animation</strong> – Tạo hiệu ứng chuyển động mượt mà khi kéo, va chạm, và hoàn thành màn
+              chơi.</li>
+            <li><strong>Effect</strong> – Áp dụng hiệu ứng hình ảnh khi kim cương biến mất hoặc đạt được 3 sao.</li>
+            <li><strong>UI System</strong> – Thiết kế giao diện người dùng như nút điều khiển, số lượt còn lại, kết
+              quả, v.v.</li>
+            <li><strong>Tilemap</strong> – Sử dụng để xây dựng bố cục màn chơi theo dạng lưới, dễ dàng quản lý và
+              thiết kế level.</li>
+            <li><strong>DoTween</strong> – Dùng để tạo các hiệu ứng chuyển động mượt mà, tối ưu và dễ quản lý cho UI
+              và gameplay.</li>
+          </ul>
 
+          <div class="portfolio-description">
+            <h2>Survival War – Khai thác, mở rộng và sinh tồn</h2>
+
+            <p>
+              <strong>Survival War</strong> là một trò chơi 2D top-down kết hợp giữa sinh tồn, khai thác tài nguyên và
+              chiến đấu.
+            </p>
+
+            <p>
+              Người chơi bắt đầu trên một ô đất nhỏ với lượng <strong>tiền và tài nguyên giới hạn</strong>. Để mở rộng
+              đất, bạn cần sử dụng tiền kiếm được từ việc <strong>thu hoạch gỗ, đá, vàng và kim cương</strong>.
+            </p>
+
+            <p>
+              Việc thu hoạch đòi hỏi <strong>nâng cấp công cụ</strong> (từ gỗ đến kim cương) để tăng tốc độ khai thác.
+              Mỗi hành động tiêu tốn <strong>thể lực</strong>, có thể hồi bằng cách <strong>ăn táo</strong> hoặc
+              <strong>đứng yên nghỉ ngơi</strong>.
+            </p>
+
+            <p>
+              Khi bạn mở rộng bản đồ đến một mức độ nhất định, <strong>quái slime sẽ xuất hiện</strong>. Từ đó, yếu tố
+              sinh tồn trở nên khốc liệt hơn – nếu bạn chết, <strong>mọi tài nguyên sẽ mất hết</strong>, chỉ giữ lại
+              công cụ đã chế tạo.
+            </p>
+
+            <p>
+              <strong>Survival War</strong> mang đến trải nghiệm kết hợp giữa quản lý tài nguyên, xây dựng và sinh tồn
+              đầy hấp dẫn cho người chơi yêu thích thử thách.
+            </p>
+          </div>
+        </section>
       </div>
 
     </section><!-- /Portfolio Details Section -->
