@@ -185,7 +185,7 @@ h6 {
 
   .header~main .hero {
     /* margin-left: -160px; */
-    width: 100vw;
+    /* width: 100vw; */
   }
 }
 
@@ -212,13 +212,9 @@ h6 {
 
   #game-info>* {
     width: 100%;
-    /* chiếm 80% chiều rộng viewport */
     max-width: 960px;
-    /* không vượt quá 960px */
     justify-self: center;
-    /* căn giữa item trong grid */
     box-sizing: border-box;
-    /* tránh padding + border làm rộng quá */
   }
 
 
