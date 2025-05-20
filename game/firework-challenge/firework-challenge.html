@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Game - Firework Challenge</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link href="../../assets/img/favicon.png" rel="icon">
+  <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="../../assets/css/main.css" rel="stylesheet">
+  <style>
+    .swiper-slide img {
+      height: calc(100vh - 128px);
+      object-fit: contain;
+    }
+  </style>
+</head>
+
+<script>
+  const GAME_NAME = "Firework Challenge";
+  const GAME_SLUG = "firework-challenge";
+</script>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex flex-column justify-content-center">
+
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="../../index.html" class="active"><i class="bi bi-house navicon"></i><span>Trang chủ</span></a></li>
+        <li><a href="../../index.html#about"><i class="bi bi-person navicon"></i><span>Giới thiệu</span></a></li>
+        <li><a href="../../index.html#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Kinh
+              nghiệm</span></a>
+        </li>
+        <li><a href="../../index.html#portfolio"><i class="bi bi-images navicon"></i><span>Dự án</span></a></li>
+        <li><a href="../../index.html#services"><i class="bi bi-hdd-stack navicon"></i><span>Kỹ năng chuyên
+              môn</span></a>
+        </li>
+        <li><a href="../../index.html#contact"><i class="bi bi-envelope navicon"></i><span>Liên hệ</span></a></li>
+        <li><a href="https://www.facebook.com/nghia.nguyen.594501" target="_blank">
+            <i class="bi bi-facebook navicon"></i><span>Facebook</span></a>
+        </li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="../../index.html">Trang chủ</a></li>
+            <li class="current">Game</li>
+            <li class="current">
+              <script>document.write(GAME_NAME);</script>
+            </li>
+          </ol>
+        </nav>
+        <h1>
+          <script>document.write(GAME_NAME);</script>
+        </h1>
+      </div>
+    </div>
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="portfolio-details-slider swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "navigation": {
+                "nextEl": ".swiper-button-next",
+                "prevEl": ".swiper-button-prev"
+              },
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="row justify-content-between gy-4 mt-4">
+
+          <div class="col-lg-9" data-aos="fade-up">
+
+            <style>
+              #game {
+                width: 80vw;
+                max-width: 960px;
+                aspect-ratio: 16 / 9;
+                margin: 0 auto;
+                background: #111;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-top: 0;
+                margin-bottom: 24px;
+              }
+
+              #unity-canvas {
+                background: #231F20;
+                display: block;
+                user-select: none;
+              }
+
+              #unity-canvas.landscape {
+                width: 100%;
+                height: 100%;
+              }
+
+              #unity-canvas.portrait {
+                height: 100%;
+                width: auto;
+              }
+            </style>
+            <section id="game" class="portfolio-details section">
+              <canvas id="unity-canvas" width="640" height="360" class="landscape"></canvas>
+            </section>
+
+
+            <script>
+              // "landscape" or "portrait"
+              const orientation = "landscape";
+
+              const canvas = document.getElementById('unity-canvas');
+
+              if (orientation === "portrait") {
+                canvas.width = 360;
+                canvas.height = 640;
+                canvas.classList.add("portrait");
+              } else {
+                canvas.width = 640;
+                canvas.height = 360;
+                canvas.classList.add("landscape");
+              }
+
+              const buildUrl = "Build";
+              const loaderUrl = buildUrl + `/${GAME_SLUG}.loader.js`;
+
+              const config = {
+                dataUrl: buildUrl + `/${GAME_SLUG}.data`,
+                frameworkUrl: buildUrl + `/${GAME_SLUG}.framework.js`,
+                codeUrl: buildUrl + `/${GAME_SLUG}.wasm`,
+                streamingAssetsUrl: "StreamingAssets",
+                companyName: "BugBungBet",
+                productName: `${GAME_NAME}`,
+                productVersion: "1.0",
+              };
+
+              const script = document.createElement("script");
+              script.src = loaderUrl;
+              script.onload = () => {
+                createUnityInstance(canvas, config).catch((message) => {
+                  alert(message);
+                });
+              };
+              document.body.appendChild(script);
+            </script>
+            <script>
+              (function () {
+                let isSnapping = false;
+                const snapThreshold = 150;
+                const gameSection = document.getElementById('game');
+
+                window.addEventListener('scroll', () => {
+                  if (isSnapping) return;
+
+                  const rect = gameSection.getBoundingClientRect();
+                  const viewportHeight = window.innerHeight;
+
+                  const distanceToCenter = Math.abs((rect.top + rect.bottom) / 2 - viewportHeight / 2);
+
+                  if (distanceToCenter < snapThreshold) {
+                    isSnapping = true;
+                    gameSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                    setTimeout(() => { isSnapping = false; }, 600);
+                  }
+                });
+              })();
+            </script>
+            <h2>Công nghệ sử dụng trong dự án</h2>
+            <ul>
+              <li><strong>Unity</strong> – Công cụ chính để phát triển game đa nền tảng.</li>
+              <li><strong>C#</strong> – Ngôn ngữ lập trình chính cho gameplay và logic.</li>
+              <li><strong>PlayerPrefab</strong> – Sử dụng để tạo và quản lý đối tượng kim cương và các thành phần
+                gameplay.</li>
+              <li><strong>Animation</strong> – Tạo hiệu ứng chuyển động mượt mà khi kéo, va chạm, và hoàn thành màn
+                chơi.</li>
+              <li><strong>Effect</strong> – Áp dụng hiệu ứng hình ảnh khi kim cương biến mất hoặc đạt được 3 sao.</li>
+              <li><strong>UI System</strong> – Thiết kế giao diện người dùng như nút điều khiển, số lượt còn lại, kết
+                quả, v.v.</li>
+              <li><strong>Tilemap</strong> – Sử dụng để xây dựng bố cục màn chơi theo dạng lưới, dễ dàng quản lý và
+                thiết kế level.</li>
+              <li><strong>DoTween</strong> – Dùng để tạo các hiệu ứng chuyển động mượt mà, tối ưu và dễ quản lý cho UI
+                và gameplay.</li>
+            </ul>
+
+            <div class="portfolio-description">
+              <h2>Firework Challenge – Kích hoạt pháo hoa tiêu diệt quái vật</h2>
+
+              <p>
+                <strong>Firework Challenge</strong> là trò chơi giải đố chiến thuật nơi bạn cần <strong>kích hoạt một
+                  quả pháo hoa duy nhất</strong> để khởi đầu một chuỗi phản ứng nổ liên tiếp.
+              </p>
+
+              <p>
+                Trò chơi bao gồm nhiều quả pháo hoa được sắp xếp sẵn trên màn hình. Sau khi quả pháo đầu tiên bay theo
+                hướng bạn chọn và nổ, nó có thể kích hoạt các quả pháo khác nếu nằm trong phạm vi. <strong>Mục tiêu là
+                  tạo ra một chuỗi nổ chính xác để quả pháo cuối cùng tiêu diệt được con quái vật</strong>.
+              </p>
+
+              <p>
+                <strong>Bạn chỉ có đúng một lần bắn duy nhất</strong>. Nếu quái vật bị tiêu diệt trước khi hết pháo hoa,
+                bạn chiến thắng. Ngược lại, nếu <strong>quái vật vẫn còn sống hoặc bạn còn pháo hoa chưa dùng
+                  đến</strong>, bạn sẽ thua cuộc.
+              </p>
+
+              <p>
+                Hãy tính toán chiến thuật, quan sát kỹ bản đồ và thử thách khả năng tư duy của bạn! <strong>Liệu bạn có
+                  thể tạo ra chuỗi pháo hoàn hảo để đánh bại mọi quái vật?</strong>
+              </p>
+            </div>
+
+          </div>
+
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-info">
+              <h3>Thông tin dự án</h3>
+              <ul>
+                <li><strong>Loại dự án</strong>: Game 2D Puzzle</li>
+                <li><strong>Thực hiện bởi</strong>: Nguyễn Tràng Nghĩa</li>
+                <li><strong>Thời gian</strong>: Đang cập nhật</li>
+                <li><strong>Mã nguồn & Demo</strong>: Đang cập nhật</li>
+                <li>Liên hệ qua <a href="mailto:nghiant0324@gmail.com">Email: nghiant0324@gmail.com</a> hoặc <a
+                    href="https://www.facebook.com/nghia.nguyen.594501" target="_blank">Facebook: Nghĩa Nguyễn</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Details Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <h3 class="sitename">Nguyễn Tràng Nghĩa</h3>
+      <p>Tôi là lập trình viên chuyên về Game, App và Web. Đam mê công nghệ, thích tạo ra những sản phẩm hữu ích và sáng
+        tạo.</p>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const imageList = [
+        "home.jpg",
+        "level-6.jpg",
+        "level-8.jpg",
+        "level-12.jpg",
+        "level-15.jpg",
+        "lose.jpg",
+        "win.jpg"
+      ];
+
+      const wrapper = document.querySelector(".swiper-wrapper");
+      if (!wrapper) return;
+
+      imageList.forEach(filename => {
+        const slide = document.createElement("div");
+        slide.className = "swiper-slide";
+
+        const img = document.createElement("img");
+        img.src = `../../assets/img/game/${GAME_SLUG}/${filename}`;
+        img.alt = filename.split(".")[0];
+
+        slide.appendChild(img);
+        wrapper.appendChild(slide);
+      });
+    });
+  </script>
+  <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/vendor/php-email-form/validate.js"></script>
+  <script src="../../assets/vendor/aos/aos.js"></script>
+  <script src="../../assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="../../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="../../assets/js/main.js"></script>
+
+</body>
+
+</html>
