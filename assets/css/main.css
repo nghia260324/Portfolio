@@ -702,9 +702,11 @@ section,
   .hero p {
     font-size: 20px;
   }
+
   #avatar {
     height: 180px;
   }
+
   #banner-avatar img {
     height: 320px;
   }
@@ -1316,11 +1318,26 @@ section,
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+@media (max-width: 768px) {
+  .portfolio-details-slider {
+    height: auto;
+  }
+
+  .swiper-slide img {
+    height: auto;
+    width: 100%;
+  }
+}
+
 @media (max-width: 575px) {
 
   .portfolio-details .swiper-button-prev,
   .portfolio-details .swiper-button-next {
     display: none;
+  }
+
+  .portfolio-details {
+    padding: 24px 0 0px;
   }
 }
 
@@ -1620,3 +1637,4 @@ section,
   height: 100%;
   width: auto;
 }
+
