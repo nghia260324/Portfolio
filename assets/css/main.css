@@ -291,6 +291,16 @@ h6 {
   transition: 0.3s;
 }
 
+.navmenu a i {
+ color: #8b8a72;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+.navmenu .active i {
+  color: #ffffff;
+}
+.navmenu a:hover i {
+  color: #ffffff;
+}
 .navmenu a i,
 .navmenu a:focus i {
   font-size: 20px;
@@ -582,7 +592,7 @@ section,
   justify-content: center;
 }
 
-.hero img {
+#banner-bgr {
   position: absolute;
   inset: 0;
   display: block;
@@ -592,12 +602,39 @@ section,
   z-index: 1;
 }
 
-.hero:before {
+/* #banner-avatar {
+  position: absolute;
+  bottom: 0;
+  right: 56px;
+  display: block;
+  height: 560px;
+  z-index: 2;
+} */
+#banner-avatar {
+  position: absolute;
+  bottom: 0;
+  right: 124px;
+  overflow: hidden;
+  z-index: 3;
+}
+
+#banner-avatar img {
+  height: 640px;
+  display: block;
+  transform: translateY(5px);
+}
+
+
+.hero::after {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 30%);
+  /* background: color-mix(in srgb, var(--background-color), transparent 30%); */
+
+  background: linear-gradient(to bottom right, #1e1e2f, #3b2f2f, #c49b66);
+
+
   position: absolute;
   inset: 0;
-  z-index: 2;
+  z-index: 1;
 }
 
 .hero .container {
@@ -606,12 +643,14 @@ section,
 }
 
 .hero h2 {
+  color: #ffffff;
   margin: 0;
   font-size: 64px;
   font-weight: 700;
 }
 
 .hero p {
+  color: #d4af7f;
   margin: 5px 0 0 0;
   font-size: 26px;
 }
@@ -1555,4 +1594,8 @@ section,
 #unity-canvas.portrait {
   height: 100%;
   width: auto;
+}
+
+#avatar {
+  height: 370px;
 }
