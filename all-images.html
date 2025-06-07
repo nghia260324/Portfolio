@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Portfolio Details - MyResume Bootstrap Template</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <link href="../assets/img/favicon.png" rel="icon">
+    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <link href="../assets/css/main.css" rel="stylesheet">
+    <style>
+        .swiper-slide img {
+            height: calc(100vh - 128px);
+            object-fit: contain;
+        }
+    </style>
+</head>
+
+<body class="portfolio-details-page">
+
+    <header id="header" class="header d-flex flex-column justify-content-center">
+
+        <i class="header-toggle d-xl-none bi bi-list"></i>
+
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="../index.html" class="active"><i class="bi bi-house navicon"></i><span>Trang chủ</span></a>
+                </li>
+                <li><a href="../index.html#about"><i class="bi bi-person navicon"></i><span>Giới thiệu</span></a></li>
+                <li><a href="../index.html#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Kinh
+                            nghiệm</span></a>
+                </li>
+                <li><a href="../index.html#portfolio"><i class="bi bi-images navicon"></i><span>Dự án</span></a></li>
+                <li><a href="../index.html#services"><i class="bi bi-hdd-stack navicon"></i><span>Kỹ năng chuyên
+                            môn</span></a></li>
+                <li><a href="../index.html#contact"><i class="bi bi-envelope navicon"></i><span>Liên hệ</span></a></li>
+                <li><a href="https://www.facebook.com/nghia.nguyen.594501" target="_blank">
+                        <i class="bi bi-facebook navicon"></i><span>Facebook</span></a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="main">
+
+        <div class="page-title" data-aos="fade">
+            <div class="container">
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li class="current">Bộ Sưu Tập Ảnh</li>
+                    </ol>
+                </nav>
+                <h1>Bộ Sưu Tập Ảnh</h1>
+            </div>
+        </div>
+
+        <!-- Portfolio Details Section -->
+        <section class="portfolio-details section">
+
+            <div class="container my-4">
+                <h1 class="mb-4 text-center">Bộ Sưu Tập Ảnh</h1>
+                <div id="image-grid" class="row g-3"></div>
+            </div>
+
+            <!-- Modal xem ảnh chi tiết -->
+            <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="imageModalLabel">Xem ảnh</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <img id="modalImage" src="" alt="Chi tiết ảnh" class="img-fluid rounded" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section><!-- /Portfolio Details Section -->
+
+    </main>
+
+    <footer id="footer" class="footer position-relative light-background">
+        <div class="container">
+            <h3 class="sitename">Nguyễn Tràng Nghĩa</h3>
+            <p>Tôi là lập trình viên chuyên về Game, App và Web. Đam mê công nghệ, thích tạo ra những sản phẩm hữu ích
+                và sáng
+                tạo.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/php-email-form/validate.js"></script>
+    <script src="../assets/vendor/aos/aos.js"></script>
+    <script src="../assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const imageGrid = document.getElementById('image-grid');
+        const modalImage = document.getElementById('modalImage');
+
+        // Hàm kiểm tra ảnh có tồn tại không
+        function checkImageExists(src) {
+            return new Promise((resolve) => {
+                const img = new Image();
+                img.onload = () => resolve(true);
+                img.onerror = () => resolve(false);
+                img.src = src;
+            });
+        }
+
+        async function loadAllImages() {
+            let i = 1;
+            while (true) {
+                const src = `assets/img/images/image_${i}.png`;
+                const exists = await checkImageExists(src);
+                if (!exists) break;
+
+                const col = document.createElement('div');
+                col.className = 'col-6 col-md-4 col-lg-3 mb-4';
+                col.innerHTML = `
+        <img src="${src}" class="img-fluid rounded shadow-sm img-thumbnail" role="button" data-bs-toggle="modal" data-bs-target="#imageModal" data-src="${src}" alt="Project Image ${i}">
+      `;
+                imageGrid.appendChild(col);
+                i++;
+            }
+        }
+
+        loadAllImages();
+
+        document.addEventListener('click', function (e) {
+            if (e.target.matches('[data-bs-toggle="modal"]')) {
+                const src = e.target.getAttribute('data-src');
+                modalImage.src = src;
+            }
+        });
+    </script>
+    <!-- Main JS File -->
+    <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>

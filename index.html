@@ -460,6 +460,34 @@
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-game">
+              <img src="assets/img/game/nino-in-foodland/level-1.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>NinoInFoodland</h4>
+                <p>
+                  Một game match-3 ngọt ngào lấy cảm hứng từ Candy Crush, với phong cách nghệ thuật màu hồng dễ thương.
+                  Cùng Nino khám phá xứ sở ẩm thực với các cấp độ tràn ngập lẩu, bánh ngọt và kẹo đủ màu sắc!
+                  Kết hợp các món ăn để ghi điểm, mở khóa màn chơi mới và thưởng thức hành trình ẩm thực kỳ diệu.
+                </p>
+
+                <a href="assets/img/game/nino-in-foodland/home.png" title="NinoInFoodland"
+                  data-gallery="portfolio-gallery-nino-in-foodland" class="glightbox preview-link"><i
+                    class="bi bi-zoom-in"></i></a>
+                <a href="assets/img/game/nino-in-foodland/level-1.png" class="glightbox d-none"
+                  data-gallery="portfolio-gallery-nino-in-foodland" title="NinoInFoodland"></a>
+                <a href="assets/img/game/nino-in-foodland/level-2.png" class="glightbox d-none"
+                  data-gallery="portfolio-gallery-nino-in-foodland" title="NinoInFoodland"></a>
+                <a href="assets/img/game/nino-in-foodland/level-3.png" class="glightbox d-none"
+                  data-gallery="portfolio-gallery-nino-in-foodland" title="NinoInFoodland"></a>
+                <a href="assets/img/game/nino-in-foodland/level-4.png" class="glightbox d-none"
+                  data-gallery="portfolio-gallery-nino-in-foodland" title="NinoInFoodland"></a>
+
+
+                <a href="game/nino-in-foodland/nino-in-foodland.html" title="More Details" class="details-link"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-game">
               <img src="assets/img/game/hedgehog-go-home/level-5.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Hedgehog Go Home</h4>
@@ -543,6 +571,7 @@
       </div>
 
     </section><!-- /Portfolio Section -->
+
 
     <!-- Services Section -->
     <section id="services" class="services section">
@@ -675,6 +704,31 @@
 
     </section><!-- /Services Section -->
 
+    <section id="project-images" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="mb-4">Hình ảnh dự án</h2>
+        <div class="row" id="image-grid">
+          <!-- JS sẽ render ảnh vào đây -->
+        </div>
+
+        <div class="text-center mt-4">
+          <a id="btnViewAll" href="/all-images.html" class="btn btn-primary">Xem tất cả</a>
+        </div>
+      </div>
+
+      <!-- Modal xem ảnh chi tiết -->
+      <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-body p-0">
+              <img src="" class="img-fluid w-100" id="modalImage" alt="Project Image">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
     <!-- Contact Section -->
     <section id="contact" class="contact section">
 
@@ -715,8 +769,8 @@
           </div>
 
           <div class="col-lg-8">
-            <form action="https://formsubmit.co/nghiant0324@gmail.com" method="post" class="php-email-form" data-aos="fade-up"
-              data-aos-delay="200">
+            <form action="https://formsubmit.co/nghiant0324@gmail.com" method="post" class="php-email-form"
+              data-aos="fade-up" data-aos-delay="200">
               <div class="row gy-4">
 
                 <div class="col-md-6">
@@ -783,6 +837,49 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const imageGrid = document.getElementById('image-grid');
+    const modalImage = document.getElementById('modalImage');
+    const btnViewMore = document.getElementById('btnViewAll');
+    const maxImages = 20;
+
+    function checkImageExists(src) {
+      return new Promise((resolve) => {
+        const img = new Image();
+        img.onload = () => resolve(true);
+        img.onerror = () => resolve(false);
+        img.src = src;
+      });
+    }
+
+    async function loadImages() {
+      let count = 0;
+      for (let i = 1; i <= maxImages; i++) {
+        const src = `assets/img/images/image_${i}.png`;
+        const exists = await checkImageExists(src);
+        if (exists) {
+          count++;
+          const col = document.createElement('div');
+          col.className = 'col-6 col-md-4 col-lg-3 mb-4';
+          col.innerHTML = `
+        <img src="${src}" class="img-fluid rounded shadow-sm img-thumbnail" role="button" data-bs-toggle="modal" data-bs-target="#imageModal" data-src="${src}" alt="Project Image ${i}">
+      `;
+          imageGrid.appendChild(col);
+        }
+      }
+      btnViewMore.style.display = (count === maxImages) ? 'inline-block' : 'none';
+    }
+
+    loadImages();
+
+    document.addEventListener('click', function (e) {
+      if (e.target.matches('[data-bs-toggle="modal"]')) {
+        const src = e.target.getAttribute('data-src');
+        modalImage.src = src;
+      }
+    });
+
+  </script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
