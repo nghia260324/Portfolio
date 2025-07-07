@@ -264,31 +264,55 @@
   <!-- Vendor JS Files -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const imageList = [
-        "home.jpg",
-        "level10.jpg",
-        "level12.jpg",
-        "level15.jpg",
-        "level6.jpg",
-        "level8.jpg",
-        "lose.jpg",
-        "pause.jpg",
-        "win.jpg"
+      const imageNames = [
+        "home",
+        "level10",
+        "level12",
+        "level15",
+        "level6",
+        "level8",
+        "lose",
+        "pause",
+        "win"
       ];
 
       const wrapper = document.querySelector(".swiper-wrapper");
       if (!wrapper) return;
 
-      imageList.forEach(filename => {
-        const slide = document.createElement("div");
-        slide.className = "swiper-slide";
+      imageNames.forEach((name) => {
+        const basePath = `../../assets/img/game/${GAME_SLUG}/${name}`;
+        const tryExtensions = [".jpg", ".png"];
 
-        const img = document.createElement("img");
-        img.src = `../../assets/img/game/${GAME_SLUG}/${filename}`;
-        img.alt = filename.split(".")[0];
+        let loaded = false;
 
-        slide.appendChild(img);
-        wrapper.appendChild(slide);
+        tryExtensions.forEach((ext, index) => {
+          if (loaded) return; // đã load thành công, không thử nữa
+
+          const imgPath = basePath + ext;
+          const testImg = new Image();
+
+          testImg.onload = () => {
+            if (loaded) return;
+            loaded = true;
+
+            const slide = document.createElement("div");
+            slide.className = "swiper-slide";
+
+            const img = document.createElement("img");
+            img.src = imgPath;
+            img.alt = name;
+
+            slide.appendChild(img);
+            wrapper.appendChild(slide);
+          };
+
+          testImg.onerror = () => {
+            if (index === tryExtensions.length - 1 && !loaded) {
+            }
+          };
+
+          testImg.src = imgPath;
+        });
       });
     });
   </script>

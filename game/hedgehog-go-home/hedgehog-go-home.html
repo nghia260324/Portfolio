@@ -271,56 +271,69 @@
   <!-- Vendor JS Files -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const imageList = [
-        "home.jpg",
-        "level-1.jpg",
-        "level-2.jpg",
-        "level-3.jpg",
-        "level-4.jpg",
-        "level-5-1.jpg",
-        "level-5-2.jpg",
-        "level-6.jpg",
-        "level-7.jpg",
-        "level-8.jpg",
-        "level-9.jpg",
-        "level-10.jpg",
-        "level-11.jpg",
-        "level-12.jpg",
-        "level-13.jpg",
-        "level-14.jpg",
-        "level-15.jpg",
-        "level-16.jpg",
-        "level-17.jpg",
-        "level-18.jpg",
-        "pause.jpg",
-        "lose.jpg",
-        "win.jpg"
+      const imageNames = [
+        "home",
+        "level-1",
+        "level-2",
+        "level-3",
+        "level-4",
+        "level-5-1",
+        "level-5-2",
+        "level-6",
+        "level-7",
+        "level-8",
+        "level-9",
+        "level-10",
+        "level-11",
+        "level-12",
+        "level-13",
+        "level-14",
+        "level-15",
+        "level-16",
+        "level-17",
+        "level-18",
+        "pause",
+        "lose",
+        "win"
       ];
 
       const wrapper = document.querySelector(".swiper-wrapper");
       if (!wrapper) return;
 
-      imageList.forEach(filename => {
-        const imgPath = `../../assets/img/game/${GAME_SLUG}/${filename}`;
-        const testImg = new Image();
+      imageNames.forEach((name) => {
+        const basePath = `../../assets/img/game/${GAME_SLUG}/${name}`;
+        const tryExtensions = [".jpg", ".png"];
 
-        testImg.onload = () => {
-          const slide = document.createElement("div");
-          slide.className = "swiper-slide";
+        let loaded = false;
 
-          const img = document.createElement("img");
-          img.src = imgPath;
-          img.alt = filename.split(".")[0];
+        tryExtensions.forEach((ext, index) => {
+          if (loaded) return; // đã load thành công, không thử nữa
 
-          slide.appendChild(img);
-          wrapper.appendChild(slide);
-        };
+          const imgPath = basePath + ext;
+          const testImg = new Image();
 
-        testImg.onerror = () => {
-          console.warn(`Ảnh không tồn tại: ${imgPath}`);
-        };
+          testImg.onload = () => {
+            if (loaded) return;
+            loaded = true;
 
-        testImg.src = imgPath;
+            const slide = document.createElement("div");
+            slide.className = "swiper-slide";
+
+            const img = document.createElement("img");
+            img.src = imgPath;
+            img.alt = name;
+
+            slide.appendChild(img);
+            wrapper.appendChild(slide);
+          };
+
+          testImg.onerror = () => {
+            if (index === tryExtensions.length - 1 && !loaded) {
+            }
+          };
+
+          testImg.src = imgPath;
+        });
       });
     });
   </script>
